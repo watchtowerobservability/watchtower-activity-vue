@@ -1,0 +1,54 @@
+{
+  "name": "@watchtowerobservability/activity-vue",
+  "version": "0.1.0",
+  "description": "Watchtower hosted activity log: typed Vue 3 component over the <wt-activity> web component",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": [
+    "./dist/index.js"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "size": "node scripts/size.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "prepack": "npm run build && npm run size"
+  },
+  "peerDependencies": {
+    "@watchtowerobservability/activity-web": ">=0.1.0",
+    "vue": ">=3.3"
+  },
+  "devDependencies": {
+    "happy-dom": "21.0.4",
+    "typescript": "5.7.2",
+    "vite": "8.3.5",
+    "vitest": "5.0.5",
+    "vue": "3.5.44"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watchtowerobservability/watchtower-activity-vue.git"
+  },
+  "homepage": "https://github.com/watchtowerobservability/watchtower-activity-vue#readme",
+  "peerDependenciesMeta": {
+    "@watchtowerobservability/activity-web": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
