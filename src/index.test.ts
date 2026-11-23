@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { createApp, h, nextTick, reactive, ref } from 'vue';
-import { ActivityLog, EVENTS, applyProps, type ActivityEvent } from './index';
+import { ActivityLog, EVENTS, applyProps, type ActivityEvent } from './index.js';
 
 function mount(props: Record<string, unknown>) {
   const root = document.createElement('div');
